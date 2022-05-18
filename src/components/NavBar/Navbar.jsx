@@ -6,7 +6,7 @@ import './Navbar.scss'
 import { images } from '../../constants';
 
 const Navbar = () => {
-    const [toggle, setToggle] = useState(true);
+    const [toggle, setToggle] = useState(false);
     const menus = ['home', 'about', 'work', 'skills', 'contact']
     return (
         <nav className='app__navbar'>
