@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
-import { animate, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import { AppWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
@@ -9,7 +9,6 @@ import './Work.scss';
 
 
 const Work = () => {
-    const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
     const [works, setWorks] = useState([]);
 
     useEffect(() => {
@@ -22,7 +21,7 @@ const Work = () => {
             <h2 className='head-text'>My Creative <span>Portfolio </span></h2>
 
             <motion.div
-                animate={animateCard}
+                animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delayChildren: 0.5 }}
                 className='app__work-portfolio'
             >
